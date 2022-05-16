@@ -1,0 +1,362 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: #18191A;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF0000;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box;
+  height: auto;
+}
+
+body {
+  background-color: #18191A !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-y: hidden;
+}
+
+div.loading-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #18191A;
+  -webkit-animation: loading 1s linear 5s 1 alternate forwards;
+          animation: loading 1s linear 5s 1 alternate forwards;
+  z-index: 9999;
+}
+
+div.loading-container div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.loading-container div img {
+  width: 30px;
+  height: 30px;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
+  -webkit-animation: loading-img 2.4s linear 2;
+          animation: loading-img 2.4s linear 2;
+}
+
+div.loading-container div span {
+  color: #E4E6EB;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes loading-img {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-img {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+a.go-up {
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+}
+
+a.go-up:hover svg.fa-circle-up {
+  opacity: 1;
+}
+
+a.go-up:active svg.fa-circle-up {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
+}
+
+a.go-up svg.fa-circle-up {
+  color: #FF0000;
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  opacity: .3;
+}
+
+section.books-container {
+  position: relative;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+section.books-container div.row {
+  position: relative;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+section.books-container div.row div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 !important;
+  margin: 50px 0 !important;
+}
+
+section.books-container div.row div div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+section.books-container div.row div div:hover img {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+section.books-container div.row div div:hover h1.label {
+  opacity: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+section.books-container div.row div div:hover div {
+  opacity: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+section.books-container div.row div div img {
+  width: 350px;
+  height: 450px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+section.books-container div.row div div h1.label {
+  position: absolute;
+  color: #E4E6EB;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 9999;
+  opacity: 0;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: default;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+section.books-container div.row div div div {
+  position: relative;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 40px;
+  z-index: 9998;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+section.books-container div.row div div div h6 {
+  color: #E4E6EB;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: default;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+section.books-container div.row div div div a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+section.books-container div.row div div div a svg {
+  width: 25px;
+  height: 25px;
+  color: #FF0000;
+}
+
+@media (max-width: 991.98px) {
+  a.go-up {
+    right: 10px !important;
+  }
+  a.go-up:hover svg.fa-circle-up {
+    opacity: .3 !important;
+  }
+  a.go-up:active svg.fa-circle-up {
+    opacity: 1 !important;
+    -webkit-filter: brightness(100%) !important;
+            filter: brightness(100%) !important;
+  }
+  section.books-container div.row div div:hover img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  section.books-container div.row div div:hover h1.label {
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+  section.books-container div.row div div:hover div {
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+  section.books-container div.row div div.mobile-hover-1 img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  section.books-container div.row div div.mobile-hover-1 h1.label {
+    opacity: 0;
+  }
+  section.books-container div.row div div.mobile-hover-1 div {
+    opacity: 0;
+  }
+  section.books-container div.row div div.mobile-hover-2 img {
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+  }
+  section.books-container div.row div div.mobile-hover-2 h1.label {
+    opacity: 1;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+  }
+  section.books-container div.row div div.mobile-hover-2 div {
+    opacity: 1;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,211 @@
+*
+    padding: 0
+    margin: 0
+    outline: none
+    box-sizing: border-box
+
+::-webkit-scrollbar
+    background-color: #18191A
+    width: 15px
+
+::-webkit-scrollbar-thumb 
+    background-color: #FF0000
+    border: 3px solid transparent
+    border-radius: 10px
+    background-clip: content-box
+    height: auto
+
+body
+    background-color: #18191A !important
+    padding: 0 !important
+    margin: 0 !important
+    overflow-y: hidden
+
+div.loading-container
+    position: fixed
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #18191A
+    animation: loading 1s linear 5s 1 alternate forwards
+    z-index: 9999
+    div
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        img
+            width: 30px
+            height: 30px
+            margin-block-end: 10px
+            animation: loading-img 2.4s linear 2
+        span
+            color: #E4E6EB
+            font-size: 20px
+            font-weight: bold
+
+@keyframes loading-img
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes loading
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+a.go-up
+    position: fixed
+    right: 0px
+    bottom: 10px
+    cursor: pointer
+    z-index: 9999
+    transition: 1s
+    -webkit-transition: 1s
+    -moz-transition: 1s
+    -ms-transition: 1s
+    -o-transition: 1s
+    transform: translateY(100px)
+    -webkit-transform: translateY(100px)
+    -moz-transform: translateY(100px)
+    -ms-transform: translateY(100px)
+    -o-transform: translateY(100px)
+    &:hover
+        svg.fa-circle-up
+            opacity: 1
+    &:active
+        svg.fa-circle-up
+            filter: brightness(75%)
+    svg.fa-circle-up
+        color: #FF0000
+        width: 40px
+        height: 40px
+        z-index: 9999
+        cursor: pointer
+        transition: opacity .5s ease-in-out
+        opacity: .3
+
+section.books-container
+    position: relative
+    width: 100%
+    padding: 0 !important
+    margin: 0 !important
+    div.row
+        position: relative
+        width: 100%
+        padding: 0 !important
+        margin: 0 !important
+        div
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: 0 !important
+            margin: 50px 0 !important
+            div
+                width: fit-content
+                height: fit-content
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 0 !important
+                margin: 0 !important
+                &:hover
+                    img
+                        filter: brightness(30%)
+                    h1.label
+                        opacity: 1
+                        animation-play-state: running
+                    div
+                        opacity: 1
+                        animation-play-state: running
+                img
+                    width: 350px
+                    height: 450px
+                    transition: .5s
+                h1.label
+                    position: absolute
+                    color: #E4E6EB
+                    transition: .5s
+                    z-index: 9999
+                    opacity: 0
+                    font-size: 24px
+                    font-weight: bold
+                    cursor: default
+                    animation-play-state: paused
+                div
+                    position: relative
+                    width: 300px
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    bottom: 40px
+                    z-index: 9998
+                    transition: .5s
+                    opacity: 0
+                    animation-play-state: paused
+                    h6
+                        color: #E4E6EB
+                        font-size: 20px
+                        font-weight: bold
+                        cursor: default
+                        margin: 0 !important
+                        padding: 0 !important
+                    a
+                        width: fit-content
+                        height: fit-content
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        cursor: pointer
+                        svg
+                            width: 25px
+                            height: 25px
+                            color: #FF0000
+
+@media (max-width: 991.98px)
+    a.go-up
+        &:hover
+            svg.fa-circle-up
+                opacity: .3 !important
+        &:active
+            svg.fa-circle-up
+                opacity: 1 !important
+                filter: brightness(100%) !important
+        right: 10px !important
+    section.books-container
+        div.row
+            div
+                div
+                    &:hover
+                        img
+                            filter: brightness(100%)
+                        h1.label
+                            opacity: 0
+                            animation-play-state: paused
+                        div
+                            opacity: 0
+                            animation-play-state: paused
+                div.mobile-hover-1
+                    img
+                        filter: brightness(100%)
+                    h1.label
+                        opacity: 0
+                    div
+                        opacity: 0
+                div.mobile-hover-2
+                    img
+                        filter: brightness(30%)
+                    h1.label
+                        opacity: 1
+                        animation-play-state: running
+                    div
+                        opacity: 1
+                        animation-play-state: running
